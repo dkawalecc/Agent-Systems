@@ -435,11 +435,11 @@ class Ground(pygame.sprite.Sprite):
             case 'Nuclear':
                 match self.level:
                     case 1:
-                        energyMultiplier += 3
+                        energyMultiplier += 2
                     case 2:
-                        energyMultiplier += 6
+                        energyMultiplier += 4
                     case 3:
-                        energyMultiplier += 9
+                        energyMultiplier += 6
             case 'Farm':
                 energyMultiplier += 1
                 if(self.level == 3):
@@ -451,7 +451,7 @@ class Ground(pygame.sprite.Sprite):
             if self.fertility < 0:
                 self.fertility = 0
         if random.random() < self.regeneration:
-            self.resources += 1
+            self.resources += 10
         
 
     def give_happines(self, agent):
